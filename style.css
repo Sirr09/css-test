@@ -1,0 +1,266 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: #ffffff;
+  color: #111111;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+}
+
+.page {
+  width: 100%;
+  padding: 26px 0 24px;
+}
+
+.social-cards {
+  width: min(100%, 1010px);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 38px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.card {
+  --brand: #111111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 2px solid #111111;
+  border-radius: 4px;
+  background: #ffffff;
+}
+
+.top-card {
+  min-height: 421px;
+  padding: 39px 20px 40px;
+}
+
+.extra-card {
+  min-height: 360px;
+  padding: 34px 20px 32px;
+}
+
+.card-featured {
+  border-color: var(--brand);
+  background: var(--brand);
+  color: #ffffff;
+}
+
+.instagram-card {
+  --brand: #e02f6d;
+}
+
+.facebook-card {
+  --brand: #1877f2;
+}
+
+.youtube-card {
+  --brand: #ff0000;
+}
+
+.linkedin-card {
+  --brand: #0a66c2;
+}
+
+.tiktok-card {
+  --brand: #000000;
+}
+
+.whatsapp-card {
+  --brand: #25d366;
+}
+
+.icon {
+  width: 82px;
+  height: 76px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 29px;
+  color: var(--brand);
+}
+
+.top-card .icon {
+  margin-bottom: 31px;
+}
+
+.card-featured .icon {
+  color: #ffffff;
+}
+
+.brand-icon svg,
+.twitter-icon svg {
+  width: 76px;
+  height: 76px;
+  fill: currentColor;
+}
+
+.twitter-icon {
+  color: #000000;
+}
+
+.instagram-icon {
+  width: 72px;
+  height: 72px;
+  position: relative;
+  border: 6px solid currentColor;
+  border-radius: 18px;
+}
+
+.instagram-icon::before {
+  content: "";
+  width: 26px;
+  height: 26px;
+  border: 6px solid currentColor;
+  border-radius: 50%;
+}
+
+.instagram-icon::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.youtube-icon {
+  width: 78px;
+  height: 54px;
+  margin-top: 9px;
+  margin-bottom: 40px;
+  border-radius: 13px;
+  background: var(--brand);
+}
+
+.black-youtube {
+  --brand: #000000;
+}
+
+.youtube-icon span {
+  width: 0;
+  height: 0;
+  margin-left: 6px;
+  border-top: 13px solid transparent;
+  border-bottom: 13px solid transparent;
+  border-left: 22px solid #ffffff;
+}
+
+h1 {
+  margin: 0 20px 24px;
+  font-size: 28px;
+  line-height: 1.2;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin-bottom: 17px;
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+p {
+  width: min(100%, 232px);
+  margin-bottom: 25px;
+  color: #333333;
+  font-size: 17px;
+  line-height: 1.42;
+  font-weight: 400;
+}
+
+.card-featured p {
+  color: #ffffff;
+}
+
+.button {
+  width: min(100%, 254px);
+  min-height: 49px;
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #000000;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.top-card.card-featured .button {
+  background: #ffffff;
+  color: var(--brand);
+}
+
+.extra-card .button {
+  background: var(--brand);
+}
+
+.extra-card.instagram-card .button {
+  background: #e02f6d;
+}
+
+.extra-section {
+  margin-top: 58px;
+}
+
+.extra-cards {
+  row-gap: 34px;
+}
+
+.creator {
+  margin-top: 28px;
+  color: #555555;
+  font-size: 14px;
+  text-align: center;
+}
+
+.creator a {
+  color: #e02f6d;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+@media (max-width: 900px) {
+  .social-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: min(100%, 720px);
+  }
+
+  .top-cards {
+    grid-template-columns: 1fr;
+    width: min(100%, 390px);
+  }
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding-top: 24px;
+  }
+
+  .social-cards {
+    grid-template-columns: 1fr;
+    width: min(100%, 390px);
+    gap: 24px;
+    padding: 0 18px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}
